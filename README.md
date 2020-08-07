@@ -53,3 +53,13 @@ A basic structure of GA is to be described. GA starts with a set of initial solu
 A generalized pseudo-code for a GA is shown in the following algorithm scheme.
 
 ![](GAtemplate.PNG)
+
+### Algorithm Scheme
+
+GA starts with a initial set of solutions, each one of them represented by a chromosome. This initial set is known as the initial population. Then, the latter will be reproduced in the generation loop. In this phase, a new population of solutions is created. Firstly, the individuals will be subject to reproduction by using the genetic operators crossover and mutation originating the new individuals, namely offsprings. Secondly, according to a replacement strategy, the population is updated by replacing the previous individuals by the new ones. Thirdly, by using an appropriate selection strategy an individual from one population is picked depending on its fitness and used to form a new offspring. This process repeated until GA reached the stopping criteria. The figure bellow shows the flowchart of a GA.
+
+![](simpleGAflowchart.PNG)
+
+GA iteratively applies the generation of new population and the replacement of a new one, see figure bellow. This is possible because the history of the previous search, i.e. the populations of the previous generations, is stored in a memory which can be used in the generation of the new population and the replacement of the old one.
+
+![](PopulationGeneration.PNG)
