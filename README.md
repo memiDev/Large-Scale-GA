@@ -7,7 +7,7 @@ In such a scenario, GAs prove to be an efficient tool to provide usable near-opt
 
 Traditional calculus based methods work by starting at a random point and by moving in the direction of the gradient, until the top of the hill is reached. This technique is efficient and works very well for single-peaked objective functions like the cost function in linear regression. But, in most real-world situations, a very complex problem arises called as landscapes, which are made of many peaks and many valleys, which causes such methods to fail, as they suffer from an inherent tendency of getting stuck at the local optima, see figure bellow.
 
-![](LocalGlobalMinima.PNG)
+![](images/LocalGlobalMinima.PNG)
 
 (Source: E.-G. Talbi. Metaheuristics: From Design to Implementation. Wiley Publishing, 2009. ISBN 0470278587, 9780470278581.)
 
@@ -48,18 +48,18 @@ operators.
 
 A basic structure of GA is to be described. GA starts with a set of initial solutions, namely initial population, which are represented by individuals. Using a selection technique, an individual from the population is picked depending on its fitness to be part of the parents population. The latter are subjected to reproduction by applying crossover and mutation operators to generate new offsprings which are constructed from the different attributes of individuals belonging to the current population. Finally, the resulting offsprings replace the existing individuals in the population and the process repeats iteratively. The image bellow illustrates one iteration or generation of the described algorithm.
 
-![](IndividualGeneration.PNG)
+![](images/IndividualGeneration.PNG)
 
 A generalized pseudo-code for a GA is shown in the following algorithm scheme.
 
-![](GAtemplate.PNG)
+![](images/GAtemplate.PNG)
 
 ### Algorithm Scheme
 
 GA starts with a initial set of solutions, each one of them represented by a chromosome. This initial set is known as the initial population. Then, the latter will be reproduced in the generation loop. In this phase, a new population of solutions is created. Firstly, the individuals will be subject to reproduction by using the genetic operators crossover and mutation originating the new individuals, namely offsprings. Secondly, according to a replacement strategy, the population is updated by replacing the previous individuals by the new ones. Thirdly, by using an appropriate selection strategy an individual from one population is picked depending on its fitness and used to form a new offspring. This process repeated until GA reached the stopping criteria. The figure bellow shows the flowchart of a GA.
 
-![](simpleGAflowchart.PNG)
+![](images/simpleGAflowchart.PNG)
 
 GA iteratively applies the generation of new population and the replacement of a new one, see figure bellow. This is possible because the history of the previous search, i.e. the populations of the previous generations, is stored in a memory which can be used in the generation of the new population and the replacement of the old one.
 
-![](PopulationGeneration.PNG)
+![](images/PopulationGeneration.PNG)
