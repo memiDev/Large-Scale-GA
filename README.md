@@ -13,6 +13,7 @@ GAs have several advantages over other metaheuristics such as:
 - Search efficiently in problem with large spaces and large number of parameters involved;
 - Robust with respect to the complexity of the search problem;
 - Use a population of solution instead of searching only one solution at a time.
+
 However, they also present some limitations such as:
 - Fitness values are calculated repeatedly which might be computationally expensive for some problems;
 - Due to their stochastic nature, there are no guarantees on the optimality or the quality of the solution;
