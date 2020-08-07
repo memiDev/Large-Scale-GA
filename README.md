@@ -21,15 +21,15 @@ However, they also present some limitations such as:
 - Due to their stochastic nature, there are no guarantees on the optimality or the quality of the solution;
 - A good understanding of the problem is required in order to properly implement, otherwise GA may not converge to the optimal or near-optimal solution.
 
-### Fundamentals of GAs
+## Fundamentals of GAs
 
 GA metaheuristic can be classified as according to some criteria such as:
-- Nature inspired: it is based on the concepts of natural selection and genetics;
-- Memory usage: it uses a memory that contains some information extracted on-line during the
+- **Nature inspired**: it is based on the concepts of natural selection and genetics;
+- **Memory usage**: it uses a memory that contains some information extracted on-line during the
 search which is limited to the population of solutions;
-- Stochastic: different final solutions may be obtained from the same initial solution;
-- Population-based search: in this algorithm a whole population of solutions is evolved;
-- Iterative: start with a population of solutions and transform it at each iteration using some search
+- **Stochastic**: different final solutions may be obtained from the same initial solution;
+- **Population-based search**: in this algorithm a whole population of solutions is evolved;
+- **Iterative**: start with a population of solutions and transform it at each iteration using some search
 operators.
 
 ### Terminology
