@@ -46,5 +46,10 @@ operators.
 
 ### Basic Structure
 
-A basic structure of GA is to be described. GA starts with a set of initial solutions, namely initial popula- tion, which are represented by individuals. Using a selection technique, an individual from the population is picked depending on its fitness to be part of the parents population. The latter are subjected to reproduction by applying crossover and mutation operators to generate new offsprings which are constructed from the different attributes of individuals belonging to the current population. Finally, the resulting offsprings replace the existing individuals in the population and the process repeats iteratively. The figure
-the image bellow illustrates one iteration or generation of the described algorithm.
+A basic structure of GA is to be described. GA starts with a set of initial solutions, namely initial popula- tion, which are represented by individuals. Using a selection technique, an individual from the population is picked depending on its fitness to be part of the parents population. The latter are subjected to reproduction by applying crossover and mutation operators to generate new offsprings which are constructed from the different attributes of individuals belonging to the current population. Finally, the resulting offsprings replace the existing individuals in the population and the process repeats iteratively. The image bellow illustrates one iteration or generation of the described algorithm.
+
+![](IndividualGeneration.PNG)
+
+A generalized pseudo-code for a GA is shown in the following algorithm scheme.
+
+![](GAtemplate.PNG)
