@@ -9,6 +9,8 @@ Traditional calculus based methods work by starting at a random point and by mov
 
 ![](LocalGlobalMinima.PNG)
 
+(Source: E.-G. Talbi. Metaheuristics: From Design to Implementation. Wiley Publishing, 2009. ISBN 0470278587, 9780470278581.)
+
 GAs have several advantages over other metaheuristics such as:
 - Search efficiently in problem with large spaces and large number of parameters involved;
 - Robust with respect to the complexity of the search problem;
