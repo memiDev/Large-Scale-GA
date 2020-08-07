@@ -43,3 +43,8 @@ operators.
 7. **Decoding and Encoding**: decoding is a process of transforming a solution from the genotype to the phenotype space, while encoding is a process of transforming from the phenotype to genotype space.
 8. **Fitness**: An objective function associates a fitness value with every individual indicating its suit- ability to the problem.
 9. **Genetic Operators**: these operators are responsible for altering the genetic composition of the individual. These include crossover and mutation which mimic the living beings’ reproduction process.
+
+### Basic Structure
+
+A basic structure of GA is to be described. GA starts with a set of initial solutions, namely initial popula- tion, which are represented by individuals. Using a selection technique, an individual from the population is picked depending on its fitness to be part of the parents population. The latter are subjected to reproduction by applying crossover and mutation operators to generate new offsprings which are constructed from the different attributes of individuals belonging to the current population. Finally, the resulting offsprings replace the existing individuals in the population and the process repeats iteratively. The figure
+the image bellow illustrates one iteration or generation of the described algorithm.
