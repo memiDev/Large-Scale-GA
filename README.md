@@ -1,7 +1,7 @@
 # Large-Scale GA
-### A genetic algorithm developed for a large scale binary problems with discrete representation.
+### A genetic algorithm developed for a large scale problems with discrete representation.
 
-This library contains different GA operators ready to be used such as:
+This library contains different GA operators ready to be used in small or large optimization problems such as:
 
 Random value generator functions:
 - *i4_uniform_ab*
@@ -21,7 +21,9 @@ Mutation:
 - Bias resetting mutation: *biasResetting*
 - Creep mutation: *creepMutation*
 
-The next sections describe briefly the theory of Genetic Algorithms and its components provided by this library.
+WARNING: These operators were developed **ONLY** for **discrete solution representations**!
+
+The next sections describe briefly the theory of Genetic Algorithms and its operators provided by this library.
 
 # Genetic Algorithms
 
