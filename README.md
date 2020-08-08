@@ -1,5 +1,5 @@
 # Large-Scale GA
-### A genetic algorithm developed for a large scale binary problems.
+### A genetic algorithm developed for a large scale binary problems with discrete representation.
 
 
 Genetic Algorithms (GAs) have the ability to deliver a ’good-enough’ solution ’fast-enough’. This makes GAs attractive for use in solving optimization problems. The reasons why GAs are needed are as follows. In NP-Hard problem the most powerful computing systems take an immense amount of time to solve the problem to optimality or to near-optimality.
