@@ -55,23 +55,27 @@ GA iteratively applies the generation of new population and the replacement of a
 
 ![](images/PopulationGeneration.PNG)
 
-## Selection strategy 
+# Selection strategy 
 
 The main principle of selection is “the fitter is an individual, the higher is its chance of being parent.” This principle inflict a selection pressure on the individuals which is responsible to drive the population to better solutions. However, worst individuals, i.e. unfit individuals, should not be discarded because they may have useful genetic material. Therefore, they have some chance to be selected. To determine such an individual’s ranking from the best to the worst it is necessary to accomplish a fitness assignmentupon the candidates individuals.
 
-### Roulette Wheel Selection
+## Roulette Wheel Selection
 This strategy assigns to each individual a selection probability that is proportional to its relative fitness. To better understand this strategy, one can visualise a pie graph in the figure below where each individual is assigned a pie’ slice on the graph which corresponds to its fitness. Around the pie, an outer roulette wheel is set. The selection of µ individuals is performed by µ independent roulette wheel’ spins. Each spin will select just one individual. Fitter individuals have more bigger slices, thus more chance to be chosen.
 
 ![](images/RouletteWheelIndividuals.PNG)
 
-### Tournament Selection
+## Tournament Selection
 This strategy consists in selecting k individuals randomly. The parameter k dictates the number of contestants in the tournament. A tournament is then applied to the k members of the group to select the best one as the figure 5.10 illustrates. To select µ individuals, the tournament procedure is performed µ times.
 
 ![](images/Tournament.PNG)
 
-## Genetic Operators
+# Genetic Operators
 
-Once the selection of individuals to form the parents population is performed, the reproduction phase takes place with the application of genetic operators such as the crossover and mutation. The function of crossover is to interchange some genetic material, i.e. characteristics, of the two parents to generate offspring. Its design mainly depends on the representation (encoding) used.
+Once the selection of individuals to form the parents population is performed, the reproduction phase takes place with the application of genetic operators such as the crossover and mutation.
+
+## Crossover
+
+The function of crossover is to interchange some genetic material, i.e. characteristics, of the two parents to generate offspring. Its design mainly depends on the representation (encoding) used. Moreover, the performance of this operator largely depends on the its user-defined parameter, the crossover rate p c that spans from 0 to 1. This parameter represents the proportion of parents on which the crossover will perform.
 
 ### N-point crossover
 
@@ -84,3 +88,7 @@ This is the generalized form of a group of different crossover operators, each o
 In the uniform crossover, two individuals can be recombined without taking into account the size of segments. Each element of the offspring is selected randomly from either parent. Each parent will contribute equally to generate the offspring as the figure bellow shows.
 
 ![](images/UniformCrossover.jpg)
+
+## Mutation
+
+The function of mutation is to perform independently small changes in selected individuals of the popu-lation in order to introduce in the offspring’s some new features (hopefully desirable features) which arenot possessed by its parents. These small changes in the genetic material of the offspring, maintain and introduce diversity in the genetic population. Moreover, it allows the GA to explore a new, maybe better part of the feasible region than the ones previously considered and consequently escaping from local minima.
