@@ -1,6 +1,29 @@
 # Large-Scale GA
 ### A genetic algorithm developed for a large scale binary problems with discrete representation.
 
+This library contains different GA operators ready to be used such as:
+
+Random value generator functions:
+- *i4_uniform_ab*
+- *r8_uniform_ab*
+
+Selection strategies operators:
+- Roulette wheel selection: *selector*
+- Tournament selection: *tournament*
+
+Crossover:
+- Uniform crossover: *Shufllex*
+- 1-Point crossover: *Xover1point*
+- 2-Point crossover: *Xover2point*
+
+Mutation:
+- Random resetting mutation: *randomResetting*
+- Bias resetting mutation: *biasResetting*
+- Creep mutation: *creepMutation*
+
+The next sections describe briefly the theory of Genetic Algorithms and its components provided by this library.
+
+# Genetic Algorithms
 
 Genetic Algorithms (GAs) have the ability to deliver a ’good-enough’ solution ’fast-enough’. This makes GAs attractive for use in solving optimization problems. The reasons why GAs are needed are as follows. In NP-Hard problem the most powerful computing systems take an immense amount of time to solve the problem to optimality or to near-optimality.
 In such a scenario, GAs prove to be an efficient tool to provide usable near-optimal solutions in a short amount of time.
@@ -92,3 +115,15 @@ In the uniform crossover, two individuals can be recombined without taking into 
 ## Mutation
 
 The function of mutation is to perform independently small changes in selected individuals of the popu-lation in order to introduce in the offspring’s some new features (hopefully desirable features) which arenot possessed by its parents. These small changes in the genetic material of the offspring, maintain and introduce diversity in the genetic population. Moreover, it allows the GA to explore a new, maybe better part of the feasible region than the ones previously considered and consequently escaping from local minima.
+
+### Random resetting mutation
+
+In the random resetting mutation, a random allele from the set of permissible values Ω is assigned to a randomly chosen gene. 
+
+### Bias resetting mutation
+
+A new operator was designed by extending the random resetting one. Instead of setting a equal probability to all alleles, it is possible to set a distribution from which the random numbers are drawn. The goal of using these modelled distribution is to control the likelihood of the numbers’ drawing in such a way that the first options are more likely to be drawn than the last ones. For that purpose, two distributions were modelled namely a half-normal distribution and a normal distribuition.
+
+### Creep mutation
+
+This operator scheme was designed for representations with ordinal attributes and therefore fits in the encoding of this problem. Its function is to add small positive or negative values to each gene with a given probability. From a distribution that is symmetric about zero, the probabilities associated with the values to be added are sampled randomly for each position. Thereby, is more likely to generate small changes than large ones. To design this operator a distribution must be chosen and its parameters must be tuned, hence controlling the distribution from which the random alleles are drawn. For this purpose, the well known normal distribution is the one to be used. The figure shows the normal distribution used in this operator with mean µ = 0 and standard deviation σ = 2.7.
