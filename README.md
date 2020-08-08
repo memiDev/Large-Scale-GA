@@ -77,10 +77,10 @@ Once the selection of individuals to form the parents population is performed, t
 
 This is the generalized form of a group of different crossover operators, each one differentiating by the number of crossing points which originates segments of the chromosome ready to be interchanged among the parents’ chromosomes. In the 1-point crossover, a crossover point κ is computed randomly which spans the chromosome’s length. Then, two segments per chromosome are formed separated in the κth position and thereafter interchanged them resulting in two offspring as the figure bellow depicts. In the 2-point crossover, two crossover points are computed randomly and then following the same method as the previous operator, they interchange genetic material within the two points as the figure bellow depicts.
 
-![](images/NpointCrossover.PNG)
+![](images/NpointCrossover.jpg)
 
 ### Uniform crossover
 
 In the uniform crossover, two individuals can be recombined without taking into account the size of segments. Each element of the offspring is selected randomly from either parent. Each parent will contribute equally to generate the offspring as the figure bellow shows.
 
-![](images/UniformCrossover.PNG)
+![](images/UniformCrossover.jpg)
