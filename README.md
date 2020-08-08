@@ -23,15 +23,6 @@ However, they also present some limitations such as:
 
 ## Fundamentals of GAs
 
-GA metaheuristic can be classified as according to some criteria such as:
-- **Nature inspired**: it is based on the concepts of natural selection and genetics;
-- **Memory usage**: it uses a memory that contains some information extracted on-line during the
-search which is limited to the population of solutions;
-- **Stochastic**: different final solutions may be obtained from the same initial solution;
-- **Population-based search**: in this algorithm a whole population of solutions is evolved;
-- **Iterative**: start with a population of solutions and transform it at each iteration using some search
-operators.
-
 ### Terminology
 
 1. **Population**: It is a subset of all the possible solutions in an encoded form to the given problem.
@@ -63,3 +54,33 @@ GA starts with a initial set of solutions, each one of them represented by a chr
 GA iteratively applies the generation of new population and the replacement of a new one, see figure bellow. This is possible because the history of the previous search, i.e. the populations of the previous generations, is stored in a memory which can be used in the generation of the new population and the replacement of the old one.
 
 ![](images/PopulationGeneration.PNG)
+
+### Selection strategy 
+
+The main principle of selection is “the fitter is an individual, the higher is its chance of being parent.” This principle inflict a selection pressure on the individuals which is responsible to drive the population to better solutions. However, worst individuals, i.e. unfit individuals, should not be discarded because they may have useful genetic material. Therefore, they have some chance to be selected. To determine such an individual’s ranking from the best to the worst it is necessary to accomplish a fitness assignmentupon the candidates individuals.
+
+## Roulette Wheel Selection
+This strategy assigns to each individual a selection probability that is proportional to its relative fitness. To better understand this strategy, one can visualise a pie graph in the figure below where each individual is assigned a pie’ slice on the graph which corresponds to its fitness. Around the pie, an outer roulette wheel is set. The selection of µ individuals is performed by µ independent roulette wheel’ spins. Each spin will select just one individual. Fitter individuals have more bigger slices, thus more chance to be chosen.
+
+![](images/RouletteWheelIndividuals.PNG)
+
+## Tournament Selection
+This strategy consists in selecting k individuals randomly. The parameter k dictates the number of contestants in the tournament. A tournament is then applied to the k members of the group to select the best one as the figure 5.10 illustrates. To select µ individuals, the tournament procedure is performed µ times.
+
+![](images/Tournament.PNG)
+
+### Genetic Operators
+
+Once the selection of individuals to form the parents population is performed, the reproduction phase takes place with the application of genetic operators such as the crossover and mutation. The function of crossover is to interchange some genetic material, i.e. characteristics, of the two parents to generate offspring. Its design mainly depends on the representation (encoding) used.
+
+## N-point crossover
+
+This is the generalized form of a group of different crossover operators, each one differentiating by the number of crossing points which originates segments of the chromosome ready to be interchanged among the parents’ chromosomes. In the 1-point crossover, a crossover point κ is computed randomly which spans the chromosome’s length. Then, two segments per chromosome are formed separated in the κth position and thereafter interchanged them resulting in two offspring as the figure bellow depicts. In the 2-point crossover, two crossover points are computed randomly and then following the same method as the previous operator, they interchange genetic material within the two points as the figure bellow depicts.
+
+![](images/NpointCrossover.PNG)
+
+## Uniform crossover
+
+In the uniform crossover, two individuals can be recombined without taking into account the size of segments. Each element of the offspring is selected randomly from either parent. Each parent will contribute equally to generate the offspring as the figure bellow shows.
+
+![](images/UniformCrossover.PNG)
